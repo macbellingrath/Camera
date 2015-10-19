@@ -7,6 +7,7 @@
 //
 
 #import "SelfieTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface SelfieTableViewController ()
 
@@ -19,6 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+    } else {
+        // show the signup or login screen
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"ChoiceVC"];
+        vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:vc animated:YES completion:NULL];
+        
+        
+    }
+    
+    
+   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

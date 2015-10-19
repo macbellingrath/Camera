@@ -125,6 +125,7 @@
 				E691C8791BD56CC100E8ADE2 /* Main Flow */,
 				E6E9F0521BD5806000DC536C /* Create.storyboard */,
 				E691C87A1BD56CC800E8ADE2 /* Create Flow */,
+				E6E9F04E1BD57D5400DC536C /* User.storyboard */,
 				E691C87B1BD56CD100E8ADE2 /* User Flow */,
 				E606234F1BD525E100F724FC /* Supporting Files */,
 			);
@@ -135,11 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				E691C8771BD56C6100E8ADE2 /* Podfile */,
-				E60623531BD525E100F724FC /* AppDelegate.m */,
 				E606235B1BD525E100F724FC /* Assets.xcassets */,
 				E60623601BD525E100F724FC /* Info.plist */,
 				E606235D1BD525E100F724FC /* LaunchScreen.storyboard */,
 				E60623521BD525E100F724FC /* AppDelegate.h */,
+				E60623531BD525E100F724FC /* AppDelegate.m */,
 				E60623501BD525E100F724FC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -169,7 +170,6 @@
 				E6A64AB51BD578F100E3F97C /* FilterView */,
 				E6A64AAE1BD5782F00E3F97C /* SubmitViewController.h */,
 				E6A64AAF1BD5782F00E3F97C /* SubmitViewController.m */,
-				E6E9F04E1BD57D5400DC536C /* User.storyboard */,
 			);
 			name = "Create Flow";
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@
         <!--Choice View Controller-->
         <scene sceneID="396-se-ZPe">
             <objects>
-                <viewController id="EPt-m8-oJW" customClass="ChoiceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChoiceVC" id="EPt-m8-oJW" customClass="ChoiceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ojq-cS-ack"/>
                         <viewControllerLayoutGuide type="bottom" id="q9h-jT-CgX"/>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6jS-uU-zRt">
-                                <rect key="frame" x="283" y="432" width="110" height="90"/>
+                                <rect key="frame" x="245" y="255" width="110" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9E-G1-ZU9">
-                                        <rect key="frame" x="26.5" y="0.0" width="57" height="30"/>
+                                        <rect key="frame" x="26" y="0.0" width="57" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Register"/>
                                         <connections>
@@ -41,6 +41,9 @@
                                         <rect key="frame" x="0.0" y="60" width="110" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Twitter Connect"/>
+                                        <connections>
+                                            <action selector="connectToTwitterButtonPressed:" destination="EPt-m8-oJW" eventType="touchUpInside" id="rD5-Wm-edA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -49,9 +52,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6jS-uU-zRt" secondAttribute="trailing" constant="207" id="BfO-Bb-SWQ"/>
-                            <constraint firstItem="q9h-jT-CgX" firstAttribute="top" secondItem="6jS-uU-zRt" secondAttribute="bottom" constant="78" id="IdN-tI-bBV"/>
-                            <constraint firstItem="6jS-uU-zRt" firstAttribute="leading" secondItem="w6M-sk-FZI" secondAttribute="leading" constant="283" id="Znx-Wy-7cA"/>
+                            <constraint firstItem="6jS-uU-zRt" firstAttribute="centerX" secondItem="w6M-sk-FZI" secondAttribute="centerX" id="0nu-us-eeM"/>
+                            <constraint firstItem="6jS-uU-zRt" firstAttribute="centerY" secondItem="w6M-sk-FZI" secondAttribute="centerY" id="hy4-RA-nvV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ewa-JX-ZVG"/>
@@ -98,6 +100,7 @@
                                         <animations/>
                                         <state key="normal" title="Next"/>
                                         <connections>
+                                            <action selector="nextButtonPressed:" destination="0tP-Ym-ivq" eventType="touchUpInside" id="fET-00-wM9"/>
                                             <segue destination="cjG-C9-SKV" kind="show" id="fam-hd-KLK"/>
                                         </connections>
                                     </button>
@@ -120,6 +123,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="XsF-5N-Q7q" id="Fxg-9V-juq"/>
+                        <outlet property="passwordTextField" destination="UIn-mU-CW9" id="3fe-Up-eYo"/>
+                        <outlet property="usernameTextField" destination="ZPe-KB-9Wh" id="ozE-oF-Kfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvC-gd-Qmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

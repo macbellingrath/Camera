@@ -9,6 +9,9 @@
 #import "SubmitViewController.h"
 
 @interface SubmitViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+- (IBAction)submitButtonPressed:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -34,4 +37,6 @@
 }
 */
 
+- (IBAction)submitButtonPressed:(UIButton *)sender {
+}
 @end

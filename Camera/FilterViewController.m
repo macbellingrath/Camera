@@ -9,6 +9,7 @@
 #import "FilterViewController.h"
 
 @interface FilterViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-EY-fha">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bt1-EY-fha">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,16 +32,26 @@
                                 <state key="normal" title="Take Photo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="captureButtonPressed:" destination="sVW-9N-v7P" eventType="touchUpInside" id="buu-4n-Wg1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bt1-EY-fha" firstAttribute="top" secondItem="BBB-WB-joC" secondAttribute="bottom" id="3rN-0M-oZr"/>
+                            <constraint firstAttribute="trailing" secondItem="Bt1-EY-fha" secondAttribute="trailing" id="FJ0-GP-Tqd"/>
                             <constraint firstItem="VkZ-0n-0Pk" firstAttribute="top" secondItem="cci-AF-O3I" secondAttribute="bottom" constant="20" id="K9i-kO-bjE"/>
                             <constraint firstItem="cci-AF-O3I" firstAttribute="centerX" secondItem="9Wd-XN-EsL" secondAttribute="centerX" id="Tmt-td-oJc"/>
+                            <constraint firstItem="Bt1-EY-fha" firstAttribute="leading" secondItem="9Wd-XN-EsL" secondAttribute="leading" id="gbg-db-ecX"/>
+                            <constraint firstItem="VkZ-0n-0Pk" firstAttribute="top" secondItem="Bt1-EY-fha" secondAttribute="bottom" id="oMM-1e-NiY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Mi-Jh-cMs"/>
+                    <connections>
+                        <outlet property="previewLayer" destination="Bt1-EY-fha" id="z0Y-x7-Bcm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPs-EK-mem" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,6 +110,9 @@
                             <constraint firstItem="qvz-bv-M40" firstAttribute="trailing" secondItem="PFy-Gl-pdi" secondAttribute="trailing" id="wIy-SC-Nr4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qvz-bv-M40" id="DDo-bn-bFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVi-rU-fQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,14 +143,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-CC-s1v">
-                                <rect key="frame" x="277" y="539" width="46" height="30"/>
+                                <rect key="frame" x="276" y="539" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="2uO-uj-LSV" eventType="touchUpInside" id="1YL-Sy-Nld"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="DXe-9m-uwl" id="Bp5-Zo-VXY"/>
+                        <outlet property="textView" destination="c2o-ZB-AWA" id="zu1-bk-vA9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHM-69-lp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

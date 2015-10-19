@@ -10,6 +10,7 @@
 
 @interface ChoiceViewController ()
 
+- (IBAction)connectToTwitterButtonPressed:(UIButton *)sender;
 @end
 
 @implementation ChoiceViewController
@@ -34,4 +35,6 @@
 }
 */
 
+- (IBAction)connectToTwitterButtonPressed:(UIButton *)sender {
+}
 @end
