@@ -15,7 +15,7 @@
 		E606235F1BD525E100F724FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E606235D1BD525E100F724FC /* LaunchScreen.storyboard */; };
 		E691C8781BD56C6100E8ADE2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E691C8771BD56C6100E8ADE2 /* Podfile */; };
 		E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */; };
-		E691C8811BD56EE400E8ADE2 /* SelfieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C8801BD56EE400E8ADE2 /* SelfieDetailViewController.m */; };
+		E691C8811BD56EE400E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C8801BD56EE400E8ADE2 /* SelfieTableViewController.m */; };
 		E6A64AA71BD5703C00E3F97C /* SelfieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AA61BD5703C00E3F97C /* SelfieTableViewCell.m */; };
 		E6A64AAA1BD5780300E3F97C /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AA91BD5780300E3F97C /* CaptureViewController.m */; };
 		E6A64AAD1BD5782200E3F97C /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AAC1BD5782200E3F97C /* FilterViewController.m */; };
@@ -45,8 +45,8 @@
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
 		E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
-		E691C87F1BD56EE400E8ADE2 /* SelfieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelfieDetailViewController.h; path = ../SelfieDetailViewController.h; sourceTree = "<group>"; };
-		E691C8801BD56EE400E8ADE2 /* SelfieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelfieDetailViewController.m; path = ../SelfieDetailViewController.m; sourceTree = "<group>"; };
+		E691C87F1BD56EE400E8ADE2 /* SelfieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieDetailViewController.h; sourceTree = "<group>"; };
+		E691C8801BD56EE400E8ADE2 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
 		E6A64AA51BD5703C00E3F97C /* SelfieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewCell.h; sourceTree = "<group>"; };
 		E6A64AA61BD5703C00E3F97C /* SelfieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewCell.m; sourceTree = "<group>"; };
 		E6A64AA81BD5780300E3F97C /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */,
 				E6A64AB41BD578AE00E3F97C /* TableView */,
 				E691C87F1BD56EE400E8ADE2 /* SelfieDetailViewController.h */,
-				E691C8801BD56EE400E8ADE2 /* SelfieDetailViewController.m */,
+				E691C8801BD56EE400E8ADE2 /* SelfieTableViewController.m */,
 			);
 			name = "Main Flow";
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 			files = (
 				E6A64AB31BD5788B00E3F97C /* FilterDataSource.m in Sources */,
 				E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */,
-				E691C8811BD56EE400E8ADE2 /* SelfieDetailViewController.m in Sources */,
+				E691C8811BD56EE400E8ADE2 /* SelfieTableViewController.m in Sources */,
 				E6A64AA71BD5703C00E3F97C /* SelfieTableViewCell.m in Sources */,
 				E60623541BD525E100F724FC /* AppDelegate.m in Sources */,
 				E6A64AB01BD5782F00E3F97C /* SubmitViewController.m in Sources */,
