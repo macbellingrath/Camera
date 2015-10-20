@@ -7,8 +7,9 @@
 //
 
 #import "AvatarViewController.h"
+@import Parse;
 
-@interface AvatarViewController ()
+@interface AvatarViewController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,12 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *username = [[PFUser currentUser] username];
+    self.usernameLabel.text = username;
+    NSLog(@"%@",username);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark: - Gesture Recognizer
+
+
 
 /*
 #pragma mark - Navigation

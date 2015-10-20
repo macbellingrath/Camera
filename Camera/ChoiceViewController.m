@@ -8,8 +8,7 @@
 
 #import "ChoiceViewController.h"
 
-@interface ChoiceViewController ()
-
+@interface ChoiceViewController () 
 @end
 
 @implementation ChoiceViewController
@@ -22,6 +21,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [self resignFirstResponder];
+    
+    return true;
 }
 
 /*

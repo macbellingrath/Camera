@@ -7,8 +7,12 @@
 //
 
 #import "FilterViewController.h"
+#import "SubmitViewController.h"
 
 @interface FilterViewController ()
+
+-(void) done;
+
 
 @end
 
@@ -17,6 +21,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:true];
     self.imageView.image = self.originalImage;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action: @selector(done)];
 }
 
 - (void)viewDidLoad {
@@ -30,6 +35,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+-(void)done {
+    SubmitViewController *submitVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SubmitVC"];
+    //TODO: - Pass edited image 
+    submitVC.editedImage = self.originalImage;
+    
+   
+    [self.navigationController pushViewController:submitVC animated:YES];
+    
+}
+
 
 /*
 #pragma mark - Navigation

@@ -12,6 +12,6 @@
 
 @property UIImage * originalImage;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+@property UIImage *editedImage;
 
 @end

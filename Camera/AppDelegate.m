@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "SelfieTableViewController.h"
+#import "ChoiceViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +31,20 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+        
+       [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+        
+        
+    } else {
+        // show the signup or login screen
+        ChoiceViewController *choiceVC = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
+        
+        
+    }
     
     return YES;
 }

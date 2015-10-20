@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.imageView.image = self.editedImage;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +37,7 @@
 }
 */
 - (IBAction)submitButtonPressed:(UIButton *)sender {
+    printf("submit pressed");
     
     PFObject * selfie = [PFObject objectWithClassName:@"Selfie"];
     selfie[@"caption"] = self.captionTextView.text;
@@ -44,9 +46,11 @@
     
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     selfie[@"imageFile"] = imageFile;
+    selfie[@"user"] = [PFUser currentUser];
     [selfie saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             //do something
+            printf("Successfully submited image");
         } else {
             //Something bad happened, handle the error
             NSLog(@"%@", error);

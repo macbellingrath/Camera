@@ -7,10 +7,13 @@
 //
 
 #import "SelfieTableViewController.h"
+#import "ChoiceViewController.h"
+@import Parse;
 
 @interface SelfieTableViewController ()
 
 @property NSMutableArray *images;
+-(void) signOut;
 
 @end
 
@@ -18,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action: @selector(signOut)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,6 +34,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)signOut{
+    [PFUser logOut];
+    printf("LOGGEDOUT");
+//    PFUser *currentUser = [PFUser currentUser];
+    
+    ChoiceViewController *choiceVC = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
+    [self presentViewController: choiceVC animated:true completion:nil];
+    
 }
 
 #pragma mark - Table view data source
