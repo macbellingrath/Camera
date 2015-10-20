@@ -14,9 +14,15 @@
 
 @implementation FilterViewController
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:true];
+    self.imageView.image = self.originalImage;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     
 }
 

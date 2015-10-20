@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FilterViewController : UIViewController
-@property UIImageView * imageView;
+
+@property UIImage * originalImage;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
