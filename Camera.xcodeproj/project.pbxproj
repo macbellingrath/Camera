@@ -13,8 +13,8 @@
 		E606235A1BD525E100F724FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60623581BD525E100F724FC /* Main.storyboard */; };
 		E606235C1BD525E100F724FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E606235B1BD525E100F724FC /* Assets.xcassets */; };
 		E606235F1BD525E100F724FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E606235D1BD525E100F724FC /* LaunchScreen.storyboard */; };
+		E67C88151BD5B591004C1725 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67C88141BD5B591004C1725 /* AVFoundation.framework */; };
 		E691C8781BD56C6100E8ADE2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E691C8771BD56C6100E8ADE2 /* Podfile */; };
-		E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */; };
 		E691C8811BD56EE400E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C8801BD56EE400E8ADE2 /* SelfieTableViewController.m */; };
 		E6A64AA71BD5703C00E3F97C /* SelfieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AA61BD5703C00E3F97C /* SelfieTableViewCell.m */; };
 		E6A64AAA1BD5780300E3F97C /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AA91BD5780300E3F97C /* CaptureViewController.m */; };
@@ -42,6 +42,7 @@
 		E606235B1BD525E100F724FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E606235E1BD525E100F724FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E60623601BD525E100F724FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E67C88141BD5B591004C1725 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
 		E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67C88151BD5B591004C1725 /* AVFoundation.framework in Frameworks */,
 				07D1B1B480D62EFD9BCEE9A6 /* Pods_Camera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 		76915D84C02C93D1203262F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E67C88141BD5B591004C1725 /* AVFoundation.framework */,
 				41CF91BFC8FDA48DF79606AE /* Pods_Camera.framework */,
 			);
 			name = Frameworks;
@@ -332,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A64AB31BD5788B00E3F97C /* FilterDataSource.m in Sources */,
-				E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */,
 				E691C8811BD56EE400E8ADE2 /* SelfieTableViewController.m in Sources */,
 				E6A64AA71BD5703C00E3F97C /* SelfieTableViewCell.m in Sources */,
 				E60623541BD525E100F724FC /* AppDelegate.m in Sources */,

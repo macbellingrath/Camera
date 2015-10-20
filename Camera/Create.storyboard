@@ -22,19 +22,10 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cci-AF-O3I">
-                                <rect key="frame" x="260" y="550" width="79" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-E3-EJh">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LW0-yk-V35"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="Take Photo">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="captureButtonPressed:" destination="sVW-9N-v7P" eventType="touchUpInside" id="buu-4n-Wg1"/>
-                                </connections>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <animations/>
@@ -42,13 +33,28 @@
                         <constraints>
                             <constraint firstItem="Bt1-EY-fha" firstAttribute="top" secondItem="BBB-WB-joC" secondAttribute="bottom" id="3rN-0M-oZr"/>
                             <constraint firstAttribute="trailing" secondItem="Bt1-EY-fha" secondAttribute="trailing" id="FJ0-GP-Tqd"/>
-                            <constraint firstItem="VkZ-0n-0Pk" firstAttribute="top" secondItem="cci-AF-O3I" secondAttribute="bottom" constant="20" id="K9i-kO-bjE"/>
-                            <constraint firstItem="cci-AF-O3I" firstAttribute="centerX" secondItem="9Wd-XN-EsL" secondAttribute="centerX" id="Tmt-td-oJc"/>
                             <constraint firstItem="Bt1-EY-fha" firstAttribute="leading" secondItem="9Wd-XN-EsL" secondAttribute="leading" id="gbg-db-ecX"/>
                             <constraint firstItem="VkZ-0n-0Pk" firstAttribute="top" secondItem="Bt1-EY-fha" secondAttribute="bottom" id="oMM-1e-NiY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Mi-Jh-cMs"/>
+                    <navigationItem key="navigationItem" id="1Mi-Jh-cMs">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cci-AF-O3I">
+                            <rect key="frame" x="260.5" y="7" width="79" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LW0-yk-V35"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Take Photo">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="captureButtonPressed:" destination="sVW-9N-v7P" eventType="touchUpInside" id="buu-4n-Wg1"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="previewLayer" destination="Bt1-EY-fha" id="z0Y-x7-Bcm"/>
                     </connections>

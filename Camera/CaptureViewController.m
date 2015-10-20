@@ -15,8 +15,11 @@
 @property (nonatomic, strong) dispatch_queue_t sampleQueue;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, strong) UIImage *capturedImage;
+@property (nonatomic, strong) AVCaptureStillImageOutput *snap;
 @property (weak, nonatomic) IBOutlet UIView *previewViewLayer;
-
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
+didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+       fromConnection:(AVCaptureConnection *)connection;
 - (IBAction)captureButtonPressed:(UIButton *)sender;
 
 @end
@@ -90,5 +93,17 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 }
 
 
+//Capture Still Image Output
+-(IBAction)captureButtonPressed:(UIButton *)sender {
+    NSLog(@"Button Pressed");
+    self.snap = [[AVCaptureStillImageOutput alloc] init];
+    
+}
+
+//nav
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+}
 
 @end
