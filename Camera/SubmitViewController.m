@@ -7,9 +7,11 @@
 //
 
 #import "SubmitViewController.h"
+#import <Parse/Parse.h>
 
 @interface SubmitViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *captionTextView;
 @end
 
 @implementation SubmitViewController
@@ -33,5 +35,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)submitButtonPressed:(UIButton *)sender {
+    
+    PFObject * selfie = [PFObject objectWithClassName:@"Selfie"];
+    selfie[@"caption"] = self.captionTextView.text;
+   NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+    
+    
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    selfie[@"imageFile"] = imageFile;
+    [selfie saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            //do something
+        } else {
+            //Something bad happened, handle the error
+            NSLog(@"%@", error);
+        }
+    }];
+}
 
 @end

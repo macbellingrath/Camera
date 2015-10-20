@@ -135,11 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				E691C8771BD56C6100E8ADE2 /* Podfile */,
-				E60623531BD525E100F724FC /* AppDelegate.m */,
 				E606235B1BD525E100F724FC /* Assets.xcassets */,
 				E60623601BD525E100F724FC /* Info.plist */,
 				E606235D1BD525E100F724FC /* LaunchScreen.storyboard */,
 				E60623521BD525E100F724FC /* AppDelegate.h */,
+				E60623531BD525E100F724FC /* AppDelegate.m */,
 				E60623501BD525E100F724FC /* main.m */,
 			);
 			name = "Supporting Files";
