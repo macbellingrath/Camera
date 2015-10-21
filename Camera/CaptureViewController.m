@@ -7,7 +7,6 @@
 //
 
 #import "CaptureViewController.h"
-
 #import "FilterViewController.h"
 
 @import AVFoundation;
@@ -30,6 +29,7 @@
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+   
     CGRect newFrame = self.picker.view.frame;
     
     newFrame.size.width = self.picker.view.frame.size.height / 4 * 3;
@@ -38,9 +38,9 @@
     
     self.picker.view.frame = newFrame;
 }
+
 - (void)viewDidLoad {
-//    [super viewDidLoad];
-//    [self.view setNeedsLayout];
+
     
     
 #pragma mark - Picker

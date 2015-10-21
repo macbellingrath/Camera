@@ -181,9 +181,9 @@
 				E6E9F05E1BD5817600DC536C /* AvatarViewController.m */,
 				E6E9F0541BD5809900DC536C /* ChoiceViewController.h */,
 				E6E9F0551BD5809900DC536C /* ChoiceViewController.m */,
-				E6E9F0571BD580C200DC536C /* LoginViewController.h */,
 				E6E9F05A1BD5810000DC536C /* RegisterViewController.h */,
 				E6E9F05B1BD5810000DC536C /* RegisterViewController.m */,
+				E6E9F0571BD580C200DC536C /* LoginViewController.h */,
 				E6E9F0581BD580C200DC536C /* LoginViewController.m */,
 			);
 			name = "User Flow";
