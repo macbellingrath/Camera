@@ -10,4 +10,8 @@
 
 @interface FilterCollectionViewCell : UICollectionViewCell
 
+@property NSString * filterName;
+@property UIImage * originalImage;
+@property (weak, nonatomic) IBOutlet UIImageView *filterCellIImageView;
+
 @end

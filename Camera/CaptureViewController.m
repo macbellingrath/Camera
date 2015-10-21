@@ -7,8 +7,8 @@
 //
 
 #import "CaptureViewController.h"
-
 #import "FilterViewController.h"
+#import "ImageEditing.h"
 
 @import AVFoundation;
 
@@ -160,7 +160,9 @@
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
     FilterViewController *filterVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterVC"];
-    filterVC.originalImage = image;
+#warning FIX This: image is reversed horizontally.
+  
+    filterVC.originalImage = flipImage(image);
     [self.navigationController pushViewController:filterVC animated:YES];
 }
 

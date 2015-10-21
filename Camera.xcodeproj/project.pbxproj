@@ -42,6 +42,7 @@
 		E606235B1BD525E100F724FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E606235E1BD525E100F724FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E60623601BD525E100F724FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63D067B1BD811120078CC7B /* ImageEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditing.h; sourceTree = "<group>"; };
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
 		E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		E6A64AB21BD5788B00E3F97C /* FilterDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDataSource.m; sourceTree = "<group>"; };
 		E6A64AB61BD579A400E3F97C /* FilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewCell.h; sourceTree = "<group>"; };
 		E6A64AB71BD579A400E3F97C /* FilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewCell.m; sourceTree = "<group>"; };
-		E6B75F181BD6B47A009AD1DE /* PatternMatching.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = PatternMatching.playground; path = ../../../PlayGrounds/PatternMatching.playground; sourceTree = "<group>"; };
 		E6E9F04E1BD57D5400DC536C /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		E6E9F0521BD5806000DC536C /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		E6E9F0541BD5809900DC536C /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
@@ -163,13 +163,13 @@
 			children = (
 				E6A64AA81BD5780300E3F97C /* CaptureViewController.h */,
 				E6A64AA91BD5780300E3F97C /* CaptureViewController.m */,
-				E6A64AB61BD579A400E3F97C /* FilterCollectionViewCell.h */,
-				E6A64AB71BD579A400E3F97C /* FilterCollectionViewCell.m */,
 				E6A64AAB1BD5782200E3F97C /* FilterViewController.h */,
 				E6A64AAC1BD5782200E3F97C /* FilterViewController.m */,
+				E63D067B1BD811120078CC7B /* ImageEditing.h */,
+				E6A64AB61BD579A400E3F97C /* FilterCollectionViewCell.h */,
+				E6A64AB71BD579A400E3F97C /* FilterCollectionViewCell.m */,
 				E6A64AB51BD578F100E3F97C /* FilterView */,
 				E6A64AAE1BD5782F00E3F97C /* SubmitViewController.h */,
-				E6B75F181BD6B47A009AD1DE /* PatternMatching.playground */,
 				E6A64AAF1BD5782F00E3F97C /* SubmitViewController.m */,
 				E6E9F04E1BD57D5400DC536C /* User.storyboard */,
 			);
