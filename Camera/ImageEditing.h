@@ -62,11 +62,11 @@ CIFilter *filter = [CIFilter filterWithName:filterName];
 
 //    [filter setValue:@0.8f forKey:kCIInputIntensityKey];
 CIImage *filteredImage = [filter valueForKey:kCIOutputImageKey];              // 4
-CGRect extent = [filteredImage extent];
-CGImageRef cgImage = [context createCGImage:filteredImage fromRect:extent];   // 5
+//CGRect extent = [filteredImage extent];
+//CGImageRef cgImage = [context createCGImage:filteredImage fromRect:extent];   // 5
 
 
-return [UIImage imageWithCGImage:cgImage];
+    return [UIImage imageWithCIImage:filteredImage];
     
 }
 

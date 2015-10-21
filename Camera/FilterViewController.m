@@ -68,9 +68,12 @@
     
     
     FilterCollectionViewCell * cell = (FilterCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    
-    self.filterImageView.image = filterImage(self.originalImage, cell.filterName);
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        UIImage * filteredImage = filterImage(self.originalImage, self.filterName);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.filterImageView.image = filteredImage;
+        });
+    });
 }
 
 /*
