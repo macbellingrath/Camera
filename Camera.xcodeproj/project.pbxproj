@@ -42,6 +42,7 @@
 		E606235B1BD525E100F724FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E606235E1BD525E100F724FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E60623601BD525E100F724FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6834A421BD83C93008B0082 /* ToDo */ = {isa = PBXFileReference; lastKnownFileType = text; name = ToDo; path = Camera/ToDo; sourceTree = "<group>"; };
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
 		E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		E60623431BD525E100F724FC = {
 			isa = PBXGroup;
 			children = (
+				E6834A421BD83C93008B0082 /* ToDo */,
 				E606234E1BD525E100F724FC /* Camera */,
 				E606234D1BD525E100F724FC /* Products */,
 				279046B9A891B96AF268E9C4 /* Pods */,
