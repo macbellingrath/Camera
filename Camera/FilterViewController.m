@@ -66,22 +66,10 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CIImage *image =   [CIImage imageWithCGImage:self.originalImage.CGImage];
-    CIFilter *filter = [CIFilter filterWithName:filterNames[indexPath.item]];
-    [filter setValue:image forKey:kCIInputImageKey];
     
-    //    [filter setValue:@0.8f forKey:kCIInputIntensityKey];
-    CIImage *filteredImage = [filter valueForKey:kCIOutputImageKey];              // 4
-    CGRect extent = [filteredImage extent];
-    CGImageRef cgImage = [context createCGImage:filteredImage fromRect:extent];   // 5
-
+    FilterCollectionViewCell * cell = (FilterCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
-    UIImage *newPtImage = [UIImage imageWithCGImage:cgImage scale:self.originalImage.scale orientation:self.originalImage.imageOrientation];
-
-    
-    
-    self.imageView.image = [UIImage imageWithCGImage:cgImage];
+    self.filterImageView.image = filterImage(self.originalImage, cell.filterName);
     
 }
 

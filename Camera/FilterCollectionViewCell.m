@@ -7,40 +7,21 @@
 //
 
 #import "FilterCollectionViewCell.h"
+#import "ImageEditing.h"
 
 @implementation FilterCollectionViewCell
 
 -(void)didMoveToWindow {
-    [self filterImage];
+    
+    self.filterCellIImageView.image = filterImage(self.originalImage, self.filterName);
+    
 }
 -(void)prepareForReuse {
-    [self filterImage];
+ 
+    self.filterCellIImageView.image = filterImage(self.originalImage, self.filterName);
     
 }
 
--(void)filterImage {
-    
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CIImage *image =   [CIImage imageWithCGImage:self.originalImage.CGImage];
-    CIFilter *filter = [CIFilter filterWithName:self.filterName];
-    [filter setValue:image forKey:kCIInputImageKey];
-    
-//    [filter setValue:@0.8f forKey:kCIInputIntensityKey];
-        CIImage *filteredImage = [filter valueForKey:kCIOutputImageKey];              // 4
-    CGRect extent = [filteredImage extent];
-    CGImageRef cgImage = [context createCGImage:filteredImage fromRect:extent];   // 5
-    
-    //Fix rotation of CIImage
-    UIImageOrientation originalOrientation = self.originalImage.imageOrientation;
-    CGFloat originalScale = self.originalImage.scale;
-    
-    UIImage *newPtImage = [UIImage imageWithCGImage:cgImage scale:originalScale orientation:originalOrientation];
-
-    
-    
-    self.filterCellIImageView.image = newPtImage;
-    
-}
 
 @end
 
