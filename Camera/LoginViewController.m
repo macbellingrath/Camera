@@ -54,9 +54,11 @@
         if (user) {
             NSLog(@"Logged in user");
             
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+            UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UINavigationController * nc = [mainSB instantiateInitialViewController];
             
-            [storyboard instantiateInitialViewController];
+            [UIApplication sharedApplication].windows[0].rootViewController = nc;
+            
             
             
         } else {

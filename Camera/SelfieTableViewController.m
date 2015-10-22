@@ -18,11 +18,15 @@
 
 @implementation SelfieTableViewController {
     NSMutableArray *selfies;
+
 }
 
 
 -(void)viewDidLoad{
+    
     [super viewDidLoad];
+    
+    
     NSLog(@"View did load");
     
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
@@ -66,13 +70,17 @@
 
     SelfieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.selfie = selfies[indexPath.row];    return cell;
+    cell.selfie = selfies[indexPath.row];
+    return cell;
 }
+     
 -(void)logout{
     [PFUser logOut];
-    UINavigationController * nc;
+   
     UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
-    nc = [userSB instantiateInitialViewController];
+    UINavigationController * nc = [userSB instantiateInitialViewController];
+    
+    [UIApplication sharedApplication].windows[0].rootViewController = nc;
 
 
     
