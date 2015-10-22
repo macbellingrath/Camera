@@ -19,6 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    
+    
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
@@ -29,6 +33,24 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    UINavigationController * nc;
+
+    
+    if ([PFUser currentUser] != nil ) {
+        //logged in
+        
+        UIStoryboard * mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        nc = [mainstoryboard instantiateInitialViewController];
+        
+    } else {
+        //not logged in
+        UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        nc = [userSB instantiateInitialViewController];
+    }
+    
+    self.window.rootViewController = nc;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

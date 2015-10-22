@@ -8,10 +8,11 @@
 
 #import "SelfieTableViewController.h"
 #import "SelfieTableViewCell.h"
+#import "Parse/Parse.h"
 
 
 @interface SelfieTableViewController ()
-
+-(void)logout;
 
 @end
 
@@ -24,6 +25,8 @@
     [super viewDidLoad];
     NSLog(@"View did load");
     
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
+    [self navigationItem].leftBarButtonItem = logoutButton;
     selfies = [@[] mutableCopy];
     
     PFQuery * selfieQuery = [PFQuery queryWithClassName:@"Selfie"];
@@ -65,5 +68,13 @@
     
     cell.selfie = selfies[indexPath.row];    return cell;
 }
+-(void)logout{
+    [PFUser logOut];
+    UINavigationController * nc;
+    UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+    nc = [userSB instantiateInitialViewController];
 
+
+    
+}
 @end

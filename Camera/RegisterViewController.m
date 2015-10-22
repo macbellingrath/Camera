@@ -60,10 +60,21 @@
     user.password = password;
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {   // Hooray! Let them use the app now.
-            SelfieTableViewController *selfietvc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SelfieTVC"];
-            [self.navigationController presentViewController:selfietvc animated:true completion:nil];
-        
+        if (succeeded) {   // Hooray! Let them use the app now.
+         
+            
+            
+//reset windows rootvc to
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            [storyboard instantiateInitialViewController];
+
+            
+            
+//            UINavigationController *nav = [[self navigationController] initWithRootViewController:selfieTVC];
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+//            [self.navigationController pushViewController:selfieTVC animated:YES];
+          
+            
          
         } else {   NSString *errorString = [error userInfo][@"error"];   // Show the errorString somewhere and let the user try again.
             NSLog(errorString);
