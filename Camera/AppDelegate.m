@@ -21,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
@@ -36,15 +38,19 @@
     if (currentUser) {
         // do stuff with the user
         
-       [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+        UINavigationController * nc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
         
+        self.window.rootViewController = nc;
         
     } else {
         // show the signup or login screen
-        ChoiceViewController *choiceVC = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
+        UINavigationController * nc = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
         
+        self.window.rootViewController = nc;
         
     }
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
