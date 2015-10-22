@@ -13,6 +13,7 @@
 		E606235A1BD525E100F724FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60623581BD525E100F724FC /* Main.storyboard */; };
 		E606235C1BD525E100F724FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E606235B1BD525E100F724FC /* Assets.xcassets */; };
 		E606235F1BD525E100F724FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E606235D1BD525E100F724FC /* LaunchScreen.storyboard */; };
+		E6406F261BD95E8F0051B755 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6406F251BD95E8F0051B755 /* User.storyboard */; };
 		E691C8781BD56C6100E8ADE2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E691C8771BD56C6100E8ADE2 /* Podfile */; };
 		E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */; };
 		E691C8811BD56EE400E8ADE2 /* SelfieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C8801BD56EE400E8ADE2 /* SelfieDetailViewController.m */; };
@@ -22,7 +23,7 @@
 		E6A64AB01BD5782F00E3F97C /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AAF1BD5782F00E3F97C /* SubmitViewController.m */; };
 		E6A64AB31BD5788B00E3F97C /* FilterDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AB21BD5788B00E3F97C /* FilterDataSource.m */; };
 		E6A64AB81BD579A400E3F97C /* FilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A64AB71BD579A400E3F97C /* FilterCollectionViewCell.m */; };
-		E6E9F04F1BD57D5400DC536C /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E9F04E1BD57D5400DC536C /* User.storyboard */; };
+		E6E9F04F1BD57D5400DC536C /* backup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E9F04E1BD57D5400DC536C /* backup.storyboard */; };
 		E6E9F0531BD5806000DC536C /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E9F0521BD5806000DC536C /* Create.storyboard */; };
 		E6E9F0561BD5809900DC536C /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E9F0551BD5809900DC536C /* ChoiceViewController.m */; };
 		E6E9F0591BD580C200DC536C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E9F0581BD580C200DC536C /* LoginViewController.m */; };
@@ -43,6 +44,7 @@
 		E606235E1BD525E100F724FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E60623601BD525E100F724FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E63D067B1BD811120078CC7B /* ImageEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditing.h; sourceTree = "<group>"; };
+		E6406F251BD95E8F0051B755 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		E6834A431BD83CE3008B0082 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		E6A64AB21BD5788B00E3F97C /* FilterDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDataSource.m; sourceTree = "<group>"; };
 		E6A64AB61BD579A400E3F97C /* FilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewCell.h; sourceTree = "<group>"; };
 		E6A64AB71BD579A400E3F97C /* FilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewCell.m; sourceTree = "<group>"; };
-		E6E9F04E1BD57D5400DC536C /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		E6E9F04E1BD57D5400DC536C /* backup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = backup.storyboard; sourceTree = "<group>"; };
 		E6E9F0521BD5806000DC536C /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		E6E9F0541BD5809900DC536C /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		E6E9F0551BD5809900DC536C /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
@@ -173,7 +175,8 @@
 				E6A64AB51BD578F100E3F97C /* FilterView */,
 				E6A64AAE1BD5782F00E3F97C /* SubmitViewController.h */,
 				E6A64AAF1BD5782F00E3F97C /* SubmitViewController.m */,
-				E6E9F04E1BD57D5400DC536C /* User.storyboard */,
+				E6E9F04E1BD57D5400DC536C /* backup.storyboard */,
+				E6406F251BD95E8F0051B755 /* User.storyboard */,
 			);
 			name = "Create Flow";
 			sourceTree = "<group>";
@@ -181,14 +184,14 @@
 		E691C87B1BD56CD100E8ADE2 /* User Flow */ = {
 			isa = PBXGroup;
 			children = (
-				E6E9F05D1BD5817600DC536C /* AvatarViewController.h */,
-				E6E9F05E1BD5817600DC536C /* AvatarViewController.m */,
 				E6E9F0541BD5809900DC536C /* ChoiceViewController.h */,
 				E6E9F0551BD5809900DC536C /* ChoiceViewController.m */,
 				E6E9F0571BD580C200DC536C /* LoginViewController.h */,
 				E6E9F05A1BD5810000DC536C /* RegisterViewController.h */,
 				E6E9F05B1BD5810000DC536C /* RegisterViewController.m */,
 				E6E9F0581BD580C200DC536C /* LoginViewController.m */,
+				E6E9F05D1BD5817600DC536C /* AvatarViewController.h */,
+				E6E9F05E1BD5817600DC536C /* AvatarViewController.m */,
 			);
 			name = "User Flow";
 			sourceTree = "<group>";
@@ -273,8 +276,9 @@
 			files = (
 				E691C8781BD56C6100E8ADE2 /* Podfile in Resources */,
 				E606235F1BD525E100F724FC /* LaunchScreen.storyboard in Resources */,
+				E6406F261BD95E8F0051B755 /* User.storyboard in Resources */,
 				E606235C1BD525E100F724FC /* Assets.xcassets in Resources */,
-				E6E9F04F1BD57D5400DC536C /* User.storyboard in Resources */,
+				E6E9F04F1BD57D5400DC536C /* backup.storyboard in Resources */,
 				E6E9F0531BD5806000DC536C /* Create.storyboard in Resources */,
 				E606235A1BD525E100F724FC /* Main.storyboard in Resources */,
 			);

@@ -90,12 +90,11 @@
 
 - (IBAction)doneButtonPressed:(UIButton *)sender {
     
+    //instantiate SubmitViewController
     
-    
-//instantiate view controller here
     SubmitViewController * submitVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SubmitVC"];
-    submitVC.imageView.image = self.imageView.image;
-    [self presentViewController:submitVC animated:true completion:nil];
+    submitVC.filteredImage = self.imageView.image;
+    [self.navigationController pushViewController:submitVC animated:YES];
     
 }
 @end

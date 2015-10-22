@@ -7,9 +7,15 @@
 //
 
 #import "LoginViewController.h"
+#import "Parse/Parse.h"
+#import "SelfieTableViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
+- (IBAction)loginButtonPressed:(id)sender;
+-(void)logIn;
 @end
 
 @implementation LoginViewController
@@ -34,4 +40,30 @@
 }
 */
 
+- (IBAction)loginButtonPressed:(id)sender {
+    [self logIn];
+}
+
+-(void)logIn{
+    
+    NSString *userName = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    [PFUser logInWithUsernameInBackground:userName password:password block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+        
+        if (user) {
+            NSLog(@"Logged in user");
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+            
+            [storyboard instantiateInitialViewController];
+            
+            
+        } else {
+            NSLog(@"error");
+        }
+    }];
+    
+    
+}
 @end

@@ -9,6 +9,8 @@
 #import "ChoiceViewController.h"
 
 @interface ChoiceViewController ()
+- (IBAction)loginButtonPressed:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *registerButtonPressed;
 
 @end
 
@@ -34,4 +36,6 @@
 }
 */
 
+- (IBAction)loginButtonPressed:(UIButton *)sender {
+}
 @end

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SubmitViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property UIImage * filteredImage;
+
 
 @end

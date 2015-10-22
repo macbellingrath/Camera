@@ -3,28 +3,58 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Selfies-->
         <scene sceneID="AKt-Or-9aO">
             <objects>
                 <tableViewController title="Selfies" id="uvs-72-lfr" customClass="SelfieTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6JN-cs-IPG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="374" sectionHeaderHeight="28" sectionFooterHeight="28" id="6JN-cs-IPG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kma-bq-mit" customClass="SelfieTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="374" id="kma-bq-mit" customClass="SelfieTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="375" height="374"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kma-bq-mit" id="3UE-cB-QD5">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="373.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-no-1Es">
+                                            <rect key="frame" x="8" y="8" width="359" height="241"/>
+                                            <animations/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-15-G05">
+                                            <rect key="frame" x="8" y="256" width="359" height="54"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="54" id="TlM-EP-Bd7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="ARN-no-1Es" firstAttribute="trailing" secondItem="3UE-cB-QD5" secondAttribute="trailingMargin" id="2Iz-wc-1j2"/>
+                                        <constraint firstItem="Jaz-15-G05" firstAttribute="top" secondItem="ARN-no-1Es" secondAttribute="bottom" constant="7" id="4xl-5J-naQ"/>
+                                        <constraint firstItem="ARN-no-1Es" firstAttribute="top" secondItem="3UE-cB-QD5" secondAttribute="topMargin" id="LSn-Jg-xtZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Jaz-15-G05" secondAttribute="bottom" constant="55.5" id="Mpr-ja-PN8"/>
+                                        <constraint firstItem="ARN-no-1Es" firstAttribute="leading" secondItem="3UE-cB-QD5" secondAttribute="leadingMargin" id="lt8-8H-81D"/>
+                                        <constraint firstItem="ARN-no-1Es" firstAttribute="leading" secondItem="Jaz-15-G05" secondAttribute="leading" id="oWn-rg-LcN"/>
+                                        <constraint firstItem="Jaz-15-G05" firstAttribute="trailing" secondItem="ARN-no-1Es" secondAttribute="trailing" id="vMu-WQ-adb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="selfieCaptionLabel" destination="Jaz-15-G05" id="nz3-hB-Ahi"/>
+                                    <outlet property="selfieImageView" destination="ARN-no-1Es" id="OwV-9X-wyQ"/>
                                     <segue destination="wyp-JX-atw" kind="show" id="bvy-lq-4ad"/>
                                 </connections>
                             </tableViewCell>
@@ -35,10 +65,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Selfies" id="naR-4m-ERf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6I-cU-raC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="155"/>
+            <point key="canvasLocation" x="756.5" y="154.5"/>
         </scene>
         <!--Selfie Detail View-->
         <scene sceneID="Xog-bB-TeA">
@@ -49,7 +80,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RBD-KL-O7r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mKZ-tA-40C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,7 +94,9 @@
         <scene sceneID="EFM-0e-K0Z">
             <objects>
                 <navigationController id="3gI-b0-jaL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eoh-PQ-hPV">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="eoh-PQ-hPV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
