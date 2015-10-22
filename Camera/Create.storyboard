@@ -123,6 +123,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="4Kv-N1-TSf" eventType="touchUpInside" id="GrM-HL-0eu"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvz-bv-M40">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>

@@ -7,10 +7,12 @@
 //
 
 #import "SelfieTableViewController.h"
+#import "Parse/Parse.h"
 
 @interface SelfieTableViewController ()
 
 @property NSMutableArray *images;
+@property NSMutableArray *selfies;
 
 @end
 
@@ -44,14 +46,35 @@
 }
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    PFUser *currentUser = [PFUser currentUser];
+    PFQuery *query = [[PFQuery alloc] initWithClassName:@"Selfie"];
+    [query whereKey:@"user" equalTo:currentUser];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+                [self.selfies addObject:object];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    //get data
+    //make image
+//    UIImage *selfie = [UIImage alloc] initWithData:];
+    
+    // Configure the cell...
+//    cell.imageView.image = self.selfies[];
+    
+    
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
