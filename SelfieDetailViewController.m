@@ -9,6 +9,12 @@
 #import "SelfieDetailViewController.h"
 
 @interface SelfieDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *selfieDetailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *selfieDetailCaptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *selfieDetailProfileIconImageView;
+- (IBAction)twitterButtonPressed:(id)sender;
+- (IBAction)winkButtonPressed:(id)sender;
+- (IBAction)flagButtonPressed:(id)sender;
 
 @end
 
@@ -34,4 +40,12 @@
 }
 */
 
+- (IBAction)twitterButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)winkButtonPressed:(id)sender {
+}
+
+- (IBAction)flagButtonPressed:(id)sender {
+}
 @end

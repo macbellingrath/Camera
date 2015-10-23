@@ -14,6 +14,8 @@
 		E606235C1BD525E100F724FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E606235B1BD525E100F724FC /* Assets.xcassets */; };
 		E606235F1BD525E100F724FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E606235D1BD525E100F724FC /* LaunchScreen.storyboard */; };
 		E6406F261BD95E8F0051B755 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6406F251BD95E8F0051B755 /* User.storyboard */; };
+		E6406F671BDAB7CE0051B755 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6406F661BDAB7CE0051B755 /* Social.framework */; };
+		E6406F691BDAB7D20051B755 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6406F681BDAB7D20051B755 /* Accounts.framework */; };
 		E691C8781BD56C6100E8ADE2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E691C8771BD56C6100E8ADE2 /* Podfile */; };
 		E691C87E1BD56E9F00E8ADE2 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C87D1BD56E9F00E8ADE2 /* SelfieTableViewController.m */; };
 		E691C8811BD56EE400E8ADE2 /* SelfieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E691C8801BD56EE400E8ADE2 /* SelfieDetailViewController.m */; };
@@ -45,6 +47,8 @@
 		E60623601BD525E100F724FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E63D067B1BD811120078CC7B /* ImageEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditing.h; sourceTree = "<group>"; };
 		E6406F251BD95E8F0051B755 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		E6406F661BDAB7CE0051B755 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E6406F681BDAB7D20051B755 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E6834A431BD83CE3008B0082 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		E691C8771BD56C6100E8ADE2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E691C87C1BD56E9F00E8ADE2 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6406F691BDAB7D20051B755 /* Accounts.framework in Frameworks */,
+				E6406F671BDAB7CE0051B755 /* Social.framework in Frameworks */,
 				07D1B1B480D62EFD9BCEE9A6 /* Pods_Camera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +105,8 @@
 		76915D84C02C93D1203262F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6406F681BDAB7D20051B755 /* Accounts.framework */,
+				E6406F661BDAB7CE0051B755 /* Social.framework */,
 				41CF91BFC8FDA48DF79606AE /* Pods_Camera.framework */,
 			);
 			name = Frameworks;

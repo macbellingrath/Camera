@@ -9,6 +9,10 @@
 #import "AvatarViewController.h"
 
 @interface AvatarViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+- (IBAction)doneButtonPressed:(id)sender;
+
+- (IBAction)changePhotoButtonPressed:(id)sender;
 
 @end
 
@@ -34,4 +38,9 @@
 }
 */
 
+- (IBAction)doneButtonPressed:(id)sender {
+}
+
+- (IBAction)changePhotoButtonPressed:(id)sender {
+}
 @end

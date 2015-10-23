@@ -9,10 +9,12 @@
 #import "SelfieTableViewController.h"
 #import "SelfieTableViewCell.h"
 #import "Parse/Parse.h"
+#import "CaptureViewController.h"
 
 
 @interface SelfieTableViewController ()
 -(void)logout;
+- (IBAction)takeSelfieButtonPressed:(UIBarButtonItem *)sender;
 
 @end
 
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     
     
+
     NSLog(@"View did load");
     
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
@@ -84,5 +87,12 @@
 
 
     
+}
+
+- (IBAction)takeSelfieButtonPressed:(UIBarButtonItem *)sender {
+    UIStoryboard *createSB = [UIStoryboard storyboardWithName:@"Create" bundle:nil];
+    UINavigationController * nc = [createSB instantiateInitialViewController];
+    
+    [UIApplication sharedApplication].windows[0].rootViewController = nc;
 }
 @end

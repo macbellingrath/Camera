@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Camera/Bolts.framework"
   install_framework "Pods-Camera/Parse.framework"
+  install_framework "Pods-Camera/ParseTwitterUtils.framework"
   install_framework "Pods-Camera/ParseUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Camera/Bolts.framework"
   install_framework "Pods-Camera/Parse.framework"
+  install_framework "Pods-Camera/ParseTwitterUtils.framework"
   install_framework "Pods-Camera/ParseUI.framework"
 fi

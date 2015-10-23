@@ -11,6 +11,7 @@
 @interface SelfieTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *selfieImageView;
 @property (weak, nonatomic) IBOutlet UILabel *selfieCaptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *selfieProfileImage;
 
 @end
 
