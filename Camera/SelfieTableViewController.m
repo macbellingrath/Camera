@@ -24,15 +24,27 @@
 }
 
 
+
 -(void)viewDidLoad{
     
     [super viewDidLoad];
-    
-    
 
     NSLog(@"View did load");
     
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
+    // Create image
+    UIImage *image = [UIImage imageNamed: @"logo_white"];
+    UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
+    
+    // set the text view to the image view
+    self.navigationItem.titleView = imageview;
+   
+ 
+    
+    
+
+    
+    
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
     [self navigationItem].leftBarButtonItem = logoutButton;
     selfies = [@[] mutableCopy];
     
@@ -79,11 +91,13 @@
      
 -(void)logout{
     [PFUser logOut];
+    
+  
    
     UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
     UINavigationController * nc = [userSB instantiateInitialViewController];
     
-    [UIApplication sharedApplication].windows[0].rootViewController = nc;
+      [[self navigationController] presentViewController:nc animated:true completion:nil];
 
 
     

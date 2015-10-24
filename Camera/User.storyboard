@@ -30,6 +30,11 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfp-48-gpM"/>
                                             <segue destination="qvZ-Az-Kap" kind="show" id="def-PJ-xZR"/>
@@ -43,6 +48,11 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="zj4-IP-Uoj" kind="show" id="pP2-wO-FPn"/>
                                         </connections>
@@ -56,6 +66,11 @@
                                         <state key="normal" image="twitter_white">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginWithTwitterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gW7-i5-Mem"/>
                                         </connections>
@@ -148,6 +163,11 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="qvZ-Az-Kap" eventType="touchUpInside" id="voo-Vh-lkh"/>
                                         </connections>
@@ -255,6 +275,11 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="JLa-HI-2h8"/>
@@ -269,7 +294,7 @@
                                 <animations/>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfie_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Xdn-hn-dNO">
-                                <rect key="frame" x="185" y="226" width="230" height="310"/>
+                                <rect key="frame" x="242.5" y="226" width="115" height="310"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -348,6 +373,11 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="Ols-fs-6vz" eventType="touchUpInside" id="u5g-fy-IJk"/>
                                 </connections>
@@ -361,17 +391,29 @@
                                     <constraint firstAttribute="height" constant="200" id="TrK-kK-Ori"/>
                                     <constraint firstAttribute="width" constant="200" id="tgY-zb-Aeu"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="4fH-j2-3RA" appends="YES" id="lOM-BB-Kz9"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7h-O9-m4O">
+                                <rect key="frame" x="285" y="253" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Set"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u7h-O9-m4O" firstAttribute="centerX" secondItem="awe-7i-ahP" secondAttribute="centerX" id="7bG-gU-d0I"/>
                             <constraint firstItem="OTH-Zi-32l" firstAttribute="leading" secondItem="awe-7i-ahP" secondAttribute="leading" constant="200" id="DO8-Cg-5Ym"/>
                             <constraint firstItem="OTH-Zi-32l" firstAttribute="centerY" secondItem="awe-7i-ahP" secondAttribute="centerY" id="LLj-Ud-fOF"/>
                             <constraint firstAttribute="trailing" secondItem="WWg-Wn-ekF" secondAttribute="trailing" constant="20" id="RNg-EX-Ruw"/>
+                            <constraint firstItem="u7h-O9-m4O" firstAttribute="centerY" secondItem="awe-7i-ahP" secondAttribute="centerY" id="aeo-SE-MfK"/>
                             <constraint firstAttribute="trailing" secondItem="OTH-Zi-32l" secondAttribute="trailing" constant="200" id="gui-Rj-Rlc"/>
                             <constraint firstItem="OTH-Zi-32l" firstAttribute="top" secondItem="Gpb-8e-bVs" secondAttribute="bottom" constant="30" id="s0Y-fF-XFm"/>
                             <constraint firstItem="OTH-Zi-32l" firstAttribute="centerX" secondItem="awe-7i-ahP" secondAttribute="centerX" id="sJb-S7-C8x"/>
@@ -425,8 +467,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="selfie_blue" width="230" height="662"/>
-        <image name="selfie_green" width="229" height="663"/>
+        <image name="selfie_blue" width="115" height="331"/>
+        <image name="selfie_green" width="114" height="331"/>
         <image name="twitter_white" width="31" height="25"/>
     </resources>
 </document>

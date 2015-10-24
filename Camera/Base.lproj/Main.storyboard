@@ -12,14 +12,14 @@
             <objects>
                 <tableViewController title="Selfies" id="uvs-72-lfr" customClass="SelfieTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="263" sectionHeaderHeight="28" sectionFooterHeight="28" id="6JN-cs-IPG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="263" id="kma-bq-mit" customClass="SelfieTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="263"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="263"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kma-bq-mit" id="3UE-cB-QD5">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="262.5"/>
@@ -87,7 +87,7 @@
                             <outlet property="delegate" destination="uvs-72-lfr" id="Tmb-jN-rQ9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Selfie" id="naR-4m-ERf">
+                    <navigationItem key="navigationItem" id="naR-4m-ERf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nVV-5J-1ua">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -110,45 +110,45 @@
                         <viewControllerLayoutGuide type="bottom" id="RBD-KL-O7r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mKZ-tA-40C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39W-VQ-uXR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39W-VQ-uXR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="281.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="39W-VQ-uXR" secondAttribute="height" multiplier="4:3" id="S2z-h8-JC6"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-yY-eAC">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-yY-eAC">
                                 <rect key="frame" x="0.0" y="346" width="375" height="321"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JDV-6h-DRU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3Z-xC-IPG">
-                                                <rect key="frame" x="0.0" y="54" width="56" height="75"/>
+                                                <rect key="frame" x="0.0" y="55" width="56" height="75"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                 <state key="normal" image="SmallPerson"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnv-xH-Siu">
-                                                <rect key="frame" x="56" y="51" width="319" height="82"/>
+                                                <rect key="frame" x="56" y="52" width="319" height="82"/>
                                                 <animations/>
                                                 <string key="text">laksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdflaksjdflakjsdf</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <animations/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="3o6-iD-xvo">
-                                        <rect key="frame" x="0.0" y="183" width="375" height="138"/>
+                                        <rect key="frame" x="0.0" y="184" width="375" height="137"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-zT-eik">
-                                                <rect key="frame" x="0.0" y="39" width="99" height="61"/>
+                                                <rect key="frame" x="0.0" y="38" width="99" height="61"/>
                                                 <animations/>
                                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                 <state key="normal" image="twitter_grey"/>
@@ -157,7 +157,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLZ-mF-e79">
-                                                <rect key="frame" x="138" y="38" width="99" height="62"/>
+                                                <rect key="frame" x="138" y="48" width="99" height="42"/>
                                                 <animations/>
                                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                 <state key="normal" image="wink_grey"/>
@@ -166,7 +166,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfA-KU-Q3A">
-                                                <rect key="frame" x="276" y="42" width="99" height="54"/>
+                                                <rect key="frame" x="276" y="48" width="99" height="42"/>
                                                 <animations/>
                                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                 <state key="normal" image="flag_grey"/>
@@ -206,18 +206,16 @@
         <!--Navigation Controller-->
         <scene sceneID="EFM-0e-K0Z">
             <objects>
-                <navigationController id="3gI-b0-jaL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gI-b0-jaL" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eoh-PQ-hPV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eoh-PQ-hPV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                         <color key="barTintColor" red="0.039215686270000001" green="0.90588235289999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="1"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -231,8 +229,8 @@
     </scenes>
     <resources>
         <image name="SmallPerson" width="66" height="75"/>
-        <image name="flag_grey" width="42" height="34"/>
+        <image name="flag_grey" width="21" height="17"/>
         <image name="twitter_grey" width="49" height="41"/>
-        <image name="wink_grey" width="41" height="42"/>
+        <image name="wink_grey" width="20" height="21"/>
     </resources>
 </document>

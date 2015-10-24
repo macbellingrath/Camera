@@ -21,8 +21,16 @@
 
 @implementation ChoiceViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    // Create image
+    UIImage *image = [UIImage imageNamed: @"logo_green"];
+    UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
+    
+    // set the text view to the image view
+    self.navigationItem.titleView = imageview;
 
-
+}
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     
@@ -35,15 +43,23 @@
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in with Twitter!");
             
-            UINavigationController * nc;
-                
-            UIStoryboard * mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            nc = [mainstoryboard instantiateInitialViewController];
-
+            
+            UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UINavigationController *nc = [main instantiateInitialViewController];
+            
+            [[self navigationController] presentViewController:nc animated:true completion:nil];
+           
+         
             
             
         } else {
             NSLog(@"User logged in with Twitter!");
+            
+            UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UINavigationController *nc = [main instantiateInitialViewController];
+            
+            [[self navigationController] presentViewController:nc animated:true completion:nil];
+          
         }
     }];
 }
