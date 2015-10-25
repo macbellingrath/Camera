@@ -9,7 +9,7 @@
 #import "SubmitViewController.h"
 #import <Parse/Parse.h>
 
-@interface SubmitViewController ()
+@interface SubmitViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *filteredImageView;
 @property (weak, nonatomic) IBOutlet UITextView *captionTextView;
@@ -22,7 +22,10 @@
     // Do any additional setup after loading the view.
     self.filteredImageView.image = self.filteredImage;
 }
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.captionTextView resignFirstResponder];
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

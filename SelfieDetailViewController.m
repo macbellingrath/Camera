@@ -23,7 +23,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self updateInfo];
+ 
 }
+
+-(void)updateInfo{
+    
+    NSLog(@"%@", self.selfie);
+    self.selfieDetailCaptionLabel.text = self.selfie[@"caption"];
+    PFFile *userImageFile = self.selfie[@"imageFile"];
+    
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            
+            self.selfieDetailImageView.image = [UIImage imageWithData:imageData];
+            [self.view setNeedsDisplay];
+            
+        }
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

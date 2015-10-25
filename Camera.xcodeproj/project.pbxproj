@@ -211,9 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				E6A64AA51BD5703C00E3F97C /* SelfieTableViewCell.h */,
+				E6A64AA61BD5703C00E3F97C /* SelfieTableViewCell.m */,
 				E6406F6D1BDACAD50051B755 /* selfieActivityIndicatorProgressView.h */,
 				E6406F6E1BDACAD50051B755 /* selfieActivityIndicatorProgressView.m */,
-				E6A64AA61BD5703C00E3F97C /* SelfieTableViewCell.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";

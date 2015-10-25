@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Parse/Parse.h"
 @interface SelfieDetailViewController : UIViewController
-
+@property (nonatomic) PFObject * selfie;
 @end

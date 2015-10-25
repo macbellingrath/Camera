@@ -7,12 +7,16 @@
 //
 
 #import "AvatarViewController.h"
-
+#import "Parse/Parse.h"
 @interface AvatarViewController ()
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 - (IBAction)doneButtonPressed:(id)sender;
 
 - (IBAction)changePhotoButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *setPhotoButton;
+@property(nonatomic) UIImagePickerController *picker;
 
 @end
 
@@ -21,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,8 +44,51 @@
 */
 
 - (IBAction)doneButtonPressed:(id)sender {
+    PFUser *currentUser = [PFUser currentUser];
+    
+    NSData *imageData =  UIImagePNGRepresentation(self.avatarImageView);
+    
+    PFFile *imageFile = [PFFile fileWithData:imageData];
+    
+    
+    
+    [currentUser setObject:imageFile forKey:@"avatarImage"];
+    
+    
+    
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            //do something
+        } else {
+            //Something bad happened, handle the error
+            NSLog(@"%@", error);
+        }
+    }];
+
 }
 
 - (IBAction)changePhotoButtonPressed:(id)sender {
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.delegate = self;
+    self.picker.showsCameraControls = YES;
+    self.picker.cameraDevice =UIImagePickerControllerCameraDeviceFront;
+    
+    [self.navigationController presentViewController:self.picker animated:YES completion:
+        nil];
+     
+
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.avatarImageView.image = image;
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    
+    
+   
+    
+
 }
 @end

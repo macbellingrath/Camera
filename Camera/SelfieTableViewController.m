@@ -8,6 +8,7 @@
 
 #import "SelfieTableViewController.h"
 #import "SelfieTableViewCell.h"
+#import "SelfieDetailViewController.h"
 #import "Parse/Parse.h"
 #import "CaptureViewController.h"
 
@@ -44,8 +45,8 @@
 
     
     
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action: @selector(logout)];
-    [self navigationItem].leftBarButtonItem = logoutButton;
+    UIBarButtonItem *moreButton = [[UIBarButtonItem alloc] initWithTitle:@"..." style:UIBarButtonItemStylePlain target:self action: @selector(showMore)];
+    [self navigationItem].leftBarButtonItem = moreButton;
     selfies = [@[] mutableCopy];
     
     PFQuery * selfieQuery = [PFQuery queryWithClassName:@"Selfie"];
@@ -77,6 +78,21 @@
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+#pragma mark: - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier  isEqual: @"showDetail"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        SelfieDetailViewController *vc = (SelfieDetailViewController *)segue.destinationViewController;
+        
+        [vc setSelfie: selfies[indexPath.row]];
+        
+    }
+    
+}
 
 
 
@@ -88,7 +104,33 @@
     cell.selfie = selfies[indexPath.row];
     return cell;
 }
-     
+-(void)showMore {
+    
+  
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"More" message: @"Choose an option" preferredStyle: UIAlertControllerStyleActionSheet];
+    
+
+    UIAlertAction *logoutAction = [UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self logout];
+    }];
+    
+    
+    
+    UIAlertAction *showProfileAction = [UIAlertAction actionWithTitle:@"Profile" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        UINavigationController * nc = [userSB instantiateViewControllerWithIdentifier:@"AvatarVC"];
+        
+        [[self navigationController] presentViewController:nc animated:true completion:nil];
+        
+
+    }];
+    [ac addAction:logoutAction];
+    [ac addAction:showProfileAction];
+    
+    [self presentViewController:ac animated:YES completion:nil];
+    
+}
+
 -(void)logout{
     [PFUser logOut];
     
@@ -104,9 +146,11 @@
 }
 
 - (IBAction)takeSelfieButtonPressed:(UIBarButtonItem *)sender {
-    UIStoryboard *createSB = [UIStoryboard storyboardWithName:@"Create" bundle:nil];
-    UINavigationController * nc = [createSB instantiateInitialViewController];
+   
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Create" bundle:nil];
+    UINavigationController *nc = [main instantiateInitialViewController];
     
-    [UIApplication sharedApplication].windows[0].rootViewController = nc;
-}
+    [[self navigationController] presentViewController:nc animated:true completion:nil];}
+
+
 @end

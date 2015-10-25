@@ -28,7 +28,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-no-1Es">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="263"/>
                                             <animations/>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzQ-eo-2J6">
                                             <rect key="frame" x="0.0" y="206" width="375" height="57"/>
@@ -78,7 +78,7 @@
                                     <outlet property="selfieCaptionLabel" destination="Jaz-15-G05" id="nz3-hB-Ahi"/>
                                     <outlet property="selfieImageView" destination="ARN-no-1Es" id="OwV-9X-wyQ"/>
                                     <outlet property="selfieProfileImage" destination="iNT-g9-GGr" id="G6G-I5-EpV"/>
-                                    <segue destination="wyp-JX-atw" kind="show" id="bvy-lq-4ad"/>
+                                    <segue destination="wyp-JX-atw" kind="show" identifier="showDetail" id="bvy-lq-4ad"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
